@@ -1,0 +1,35 @@
+ Info​ ​206​ ​-​ ​Group​ ​B Anu​ ​Pandey​ ​-​ ​Dylan​ ​Fox​ ​-​ ​Devin​ ​Huang​ ​-​ ​Soravis​ ​Prakkamakul September​ ​11,​ ​2017
+Project​ ​Proposal:​ ​NextBus​ ​SlackBot
+Submit​ ​a​ ​problem​ ​statement​ ​in​ ​which​ ​the​ ​team​ ​identifies​ ​the​ ​issue​ ​that​ ​it​ ​seeks​ ​to address​ ​through​ ​a​ ​computer​ ​program.​ ​In​ ​this​ ​document,​ ​you​ ​can​ ​write​ ​an​ ​overview​ ​of​ ​the computer​ ​program​ ​you​ ​want​ ​to​ ​write.​ ​The​ ​statement​ ​should​ ​be​ ​1-2​ ​pages.​ ​A​ ​final​ ​version​ ​of​ ​your problem​ ​statement​ ​is​ ​due​ ​via​ ​your​ ​team​ ​GitHub​ ​project​ ​folder​ ​by​ ​due​ ​September​ ​12,​ ​2017.
+Problem​ ​Statement
+Logistics​ ​planning​ ​is​ ​never​ ​easy.​ ​Trying​ ​to​ ​schedule​ ​events​ ​and​ ​make​ ​it​ ​to​ ​them​ ​on​ ​time means​ ​being​ ​constantly​ ​aware​ ​of​ ​when​ ​you​ ​need​ ​to​ ​depart​ ​one​ ​place​ ​to​ ​get​ ​to​ ​the​ ​next.​ ​This​ ​is difficult​ ​enough​ ​when​ ​you’re​ ​walking,​ ​bicycling,​ ​or​ ​using​ ​other​ ​modes​ ​of​ ​travel​ ​that​ ​are consistent​ ​in​ ​the​ ​time​ ​they​ ​take​ ​to​ ​travel​ ​from​ ​point​ ​A​ ​to​ ​point​ ​B;​ ​but​ ​when​ ​you​ ​must​ ​also​ ​take into​ ​account​ ​the​ ​movements​ ​of​ ​buses​ ​and​ ​trains,​ ​it​ ​becomes​ ​a​ ​downright​ ​headache.
+Luckily,​ ​we​ ​live​ ​in​ ​an​ ​era​ ​where​ ​public​ ​transit​ ​is​ ​equipped​ ​with​ ​GPS​ ​trackers,​ ​and​ ​precise data​ ​about​ ​their​ ​timing​ ​is​ ​available.​ ​However,​ ​accessing​ ​this​ ​data​ ​usually​ ​means​ ​going​ ​to​ ​a specific​ ​application​ ​or​ ​website,​ ​and​ ​communicating​ ​it​ ​to​ ​others​ ​often​ ​means​ ​typing​ ​things​ ​out from​ ​memory.​ ​​We​ ​believe​ ​that​ ​there​ ​are​ ​better​ ​ways​ ​to​ ​access​ ​and​ ​share​ ​public​ ​transit data​ ​in​ ​order​ ​to​ ​enable​ ​people​ ​to​ ​plan​ ​logistics​ ​without​ ​juggling​ ​applications.
+Program​ ​Overview
+Slack​ ​is​ ​a​ ​communications​ ​technology​ ​already​ ​used​ ​by​ ​members​ ​of​ ​the​ ​I​ ​School.​ ​A common​ ​use​ ​is​ ​to​ ​discuss​ ​logistics​ ​for​ ​events​ ​and​ ​meetings.​ ​For​ ​members​ ​coming​ ​or​ ​going off-campus​ ​by​ ​public​ ​transit,​ ​bus​ ​and​ ​train​ ​times​ ​often​ ​come​ ​up​ ​in​ ​such​ ​discussions;​ ​yet accessing​ ​and​ ​sharing​ ​that​ ​data​ ​via​ ​Slack​ ​is​ ​cumbersome.​ ​Fortunately,​ ​Slack​ ​has​ ​automated agents​ ​known​ ​as​ ​Slackbots​ ​that​ ​can​ ​make​ ​doing​ ​so​ ​easier.
+To​ ​create​ ​a​ ​Slackbot,​ ​we​ ​will​ ​first​ ​follow​ ​​Matt​ ​Makai’s​ ​tutorial​​ ​on​ ​building​ ​Slackbots​ ​in Python.​ ​This​ ​will​ ​let​ ​us​ ​create​ ​a​ ​Slackbot​ ​that​ ​runs​ ​as​ ​a​ ​Python​ ​program​ ​and​ ​interacts​ ​with Slack’s​ ​Real​ ​Time​ ​Messaging​ ​API.​ ​The​ ​program​ ​will​ ​subscribe​ ​to​ ​Slack’s​ ​services​ ​via​ ​RTM protocol​ ​and​ ​be​ ​notified​ ​when​ ​a​ ​user​ ​sends​ ​a​ ​message​ ​to​ ​the​ ​bot.​ ​Default​ ​bot​ ​functionality includes​ ​responding​ ​to​ ​direct​ ​messages​ ​and​ ​posting​ ​in​ ​channels​ ​when​ ​certain​ ​keywords​ ​are entered.
+We​ ​will​ ​then​ ​modify​ ​the​ ​Slackbot​ ​to​ ​allow​ ​it​ ​to​ ​import​ ​data​ ​from​ ​NextBus​ ​and​ ​BART​ ​APIs regarding​ ​bus​ ​and​ ​train​ ​departure​ ​and​ ​arrival​ ​information.​ ​The​ ​user​ ​will​ ​be​ ​able​ ​to​ ​access​ ​this data​ ​by​ ​sending​ ​a​ ​direct​ ​message​ ​to​ ​the​ ​bot,​ ​or​ ​by​ ​inviting​ ​the​ ​bot​ ​to​ ​one​ ​of​ ​their​ ​channels, thereby​ ​enabling​ ​everyone​ ​in​ ​the​ ​channel​ ​to​ ​publicly​ ​access​ ​the​ ​data.
+ 
+ Info​ ​206​ ​-​ ​Group​ ​B Anu​ ​Pandey​ ​-​ ​Dylan​ ​Fox​ ​-​ ​Devin​ ​Huang​ ​-​ ​Soravis​ ​Prakkamakul September​ ​11,​ ​2017
+Our​ ​initial​ ​goal​ ​is​ ​to​ ​allow​ ​users​ ​to​ ​look​ ​up​ ​upcoming​ ​departure​ ​information​ ​for​ ​a​ ​specific BART​ ​station​ ​or​ ​bus​ ​stop​ ​and​ ​share​ ​it​ ​using​ ​Slack.​ ​Our​ ​reach​ ​goals​ ​include:
+● Letting​ ​the​ ​user​ ​specify​ ​a​ ​future​ ​time​ ​of​ ​arrival​ ​in​ ​addition​ ​to​ ​accessing​ ​present information.
+● Integrating​ ​with​ ​Google​ ​Maps​ ​to​ ​provide​ ​personalized​ ​directions​ ​to​ ​the​ ​user​ ​based​ ​on their​ ​location.
+● Notifying​ ​the​ ​user​ ​of​ ​the​ ​best​ ​time​ ​to​ ​leave​ ​in​ ​order​ ​to​ ​catch​ ​the​ ​next​ ​BART​ ​train​ ​or​ ​bus.
+● Notifying​ ​the​ ​user​ ​if​ ​the​ ​schedule​ ​of​ ​a​ ​bus​ ​or​ ​BART​ ​train​ ​they​ ​looked​ ​up​ ​changes.
+Appendix:​ ​Benchmarking/Resources
+● Tutorials
+○ Build​ ​a​ ​Slack​ ​Bot​ ​on​ ​fullstackpython​ ​-​ ​This​ ​will​ ​be​ ​the​ ​base​ ​on​ ​which​ ​we​ ​will
+implement​ ​new​ ​features:
+https://www.fullstackpython.com/blog/build-first-slack-bot-python.html
+● Core​ ​APIs
+○ Nextbus​ ​API​ ​-​ ​Using​ ​this,​ ​we​ ​will​ ​have​ ​the​ ​potential​ ​to​ ​make​ ​predictions​ ​of​ ​when
+buses​ ​will​ ​arrive​ ​and​ ​where​ ​they​ ​currently​ ​are:
+https://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
+○ BART​ ​API​ ​-​ ​Using​ ​this​ ​API,​ ​we​ ​will​ ​have​ ​the​ ​potential​ ​to​ ​obtain​ ​station​ ​and schedule​ ​information​ ​for​ ​each​ ​BART​ ​train​ ​:​ ​​http://api.bart.gov/
+○ Slack​ ​API​ ​-​ ​We​ ​will​ ​use​ ​this​ ​in​ ​order​ ​to​ ​create​ ​a​ ​slack​ ​bot​ ​with​ ​the​ ​capability​ ​to inform​ ​you​ ​of​ ​public​ ​transportation:​ ​​https://api.slack.com/
+● Example​ ​Slackbots/Data​ ​Aggregators
+○ Moovel​ ​-​ ​Using​ ​the​ ​"/moovel​ ​location​ ​A​ ​to​ ​location​ ​B"​ ​command,​ ​users​ ​can​ ​call​ ​up
+local​ ​public​ ​transport​ ​connections​ ​from​ ​A​ ​to​ ​B:
+https://moovel-group.com/en/press/moovel-starts-first-messenger-bot-on-slack
+○ Realtime​ ​departure​ ​slack​ ​bot​ ​-​ ​This​ ​will​ ​be​ ​used​ ​to​ ​see​ ​incoming​ ​BART​ ​trains​ ​and the​ ​time​ ​estimate​ ​for​ ​each​ ​one:​ ​​https://open.blockspring.com/jtokoph/bart-times
+○ Satori​ ​bike​ ​sharing​ ​channels​ ​-​ ​This​ ​is​ ​a​ ​reach​ ​goal​ ​for​ ​us.​ ​We​ ​may​ ​choose​ ​to implement​ ​this​ ​API​ ​later​ ​on:​ ​​https://www.satori.com/opendata/channels
+       
